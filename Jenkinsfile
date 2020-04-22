@@ -2,7 +2,12 @@ pipeline {
 	agent {label 'agent1'}
 	
 	stages {
-		stage('test') {
+		stage('init') {
+			steps {
+				sh 'terraform init'
+			}
+		}
+		stage('plan') {
 			steps {
 				sh 'terraform plan'
 			}
