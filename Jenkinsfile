@@ -4,6 +4,7 @@ pipeline {
 	stages {
 		stage('init') {
 			steps {
+				sh 'source env-vars'
 				sh 'terraform init'
 			}
 		}
