@@ -11,6 +11,7 @@ pipeline {
 		}
 		stage('plan') {
 			steps {
+				sh 'source ./env-vars'
 				sh 'terraform plan'
 			}
 		}
